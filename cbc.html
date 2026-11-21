@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApexCBE | Competency-Based Learning Portal</title>
+    <link rel="stylesheet" href="cbc.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Apex<span>CBE</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Overview</a></li>
+            <li><a href="#competencies">My Framework</a></li>
+            <li><a href="#simulator">Mastery Assessment</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>Master Skills. <br><span class="highlight">Advance at Your Own Pace.</span></h1>
+            <p>Welcome to your personal Competency-Based Education tracking console. Forget seat time—focus entirely on proving performance mastery in core engineering and development sectors.</p>
+            <a href="#simulator" class="btn-primary">Launch Assessment Terminal</a>
+        </div>
+    </header>
+
+    <!-- Competencies & Progress Meter Section -->
+    <section id="competencies" class="section">
+        <h2 class="section-title">Active Competency Frameworks</h2>
+        <div class="grid">
+            
+            <!-- Skill Tracker 1 -->
+            <div class="competency-card">
+                <div class="card-header">
+                    <h3>Data Structures & Algorithms</h3>
+                    <span class="status-badge master">Mastered</span>
+                </div>
+                <p>Ability to implement, analyze, and optimize advanced computational algorithms and runtime complexities.</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%;"></div>
+                </div>
+                <div class="progress-metrics">
+                    <span>Level: Proving Mastery</span>
+                    <span>100% Verified</span>
+                </div>
+            </div>
+
+            <!-- Skill Tracker 2 -->
+            <div class="competency-card">
+                <div class="card-header">
+                    <h3>Asynchronous Programming</h3>
+                    <span class="status-badge practicing">Practising</span>
+                </div>
+                <p>Handling multi-threaded tasks, state paradigms, runtime loops, and continuous data streams.</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 65%;"></div>
+                </div>
+                <div class="progress-metrics">
+                    <span>Level: Proficient</span>
+                    <span>65% Verified</span>
+                </div>
+            </div>
+
+            <!-- Skill Tracker 3 -->
+            <div class="competency-card">
+                <div class="card-header">
+                    <h3>UI Accessibility Systems</h3>
+                    <span class="status-badge beginner">Emerging</span>
+                </div>
+                <p>Designing semantic interfaces adhering strictly to international WCAG equity standards.</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 25%;"></div>
+                </div>
+                <div class="progress-metrics">
+                    <span>Level: Novice</span>
+                    <span>25% Verified</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Mastery Simulator Widget -->
+    <section id="simulator" class="section light-bg">
+        <h2 class="section-title">Mastery Assessment Engine</h2>
+        <div class="simulator-container">
+            <p class="sim-desc">Demonstrate your application of **Asynchronous Programming** below. You must correctly pass the technical criteria assessment to push your competency status to **Mastered**.</p>
+            
+            <div class="assessment-box" id="quiz-box">
+                <div class="question-title">Scenario Task: A data stream drops packets frequently due to server lag. What is the most resilient design pattern to resolve this issue?</div>
+                
+                <div class="options-vertical">
+                    <button class="option-btn" onclick="checkCompetency(false)">A) Terminate the thread immediately and raise a fatal system error flag.</button>
+                    <button class="option-btn" onclick="checkCompetency(true)">B) Implement an exponential backoff retry mechanism with asynchronous queue handling.</button>
+                    <button class="option-btn" onclick="checkCompetency(false)">C) Shift all processes into a blocking synchronous loop to wait indefinitely.</button>
+                </div>
+            </div>
+
+            <!-- Dynamic Verification Result -->
+            <div id="assessment-result" class="assessment-result hidden">
+                <div class="result-icon">🎓</div>
+                <h3>Competency Verified!</h3>
+                <p>Your solution demonstrated optimal performance parameters. Your tracking dashboard has been securely updated to showcase complete field alignment.</p>
+                <button class="reset-btn" onclick="resetAssessment()">Reset Evaluation</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 ApexCBE Systems. Accredited Skill-First Learning Environments.</p>
+    </footer>
+
+    <script src="cbc.js"></script>
+</body>
+</html>
